@@ -42,15 +42,13 @@ export default function TodoForm({
         >
           {isLoading ? <LoaderIcon className="h-6 w-6 animate-spin" /> : "Save"}
         </button>
-        {!form.editing && (
-          <button
-            onClick={closeForm}
-            type="reset"
-            className="w-full border border-blue-400 text-blue-500 rounded mt-2 py-2"
-          >
-            Close
-          </button>
-        )}
+        <button
+          onClick={form.editing ? () => closeForm(form) : closeForm}
+          type="reset"
+          className="w-full border border-blue-400 text-blue-500 rounded mt-2 py-2"
+        >
+          Close
+        </button>
       </p>
     </form>
   );

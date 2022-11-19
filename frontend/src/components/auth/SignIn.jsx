@@ -65,7 +65,7 @@ export default function SignIn({ setUser, goToSignUp }) {
 
       <form
         onSubmit={handleSubmit}
-        className="p-8 bg-blue-50 rounded-lg max-w-md"
+        className="p-8 mx-4 bg-blue-50 rounded-lg max-w-md"
       >
         <input
           onChange={(e) => setEmail(e.target.value.trim())}
